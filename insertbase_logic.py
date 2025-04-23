@@ -11,10 +11,7 @@ def lancer_insertion():
 
     # Logique actuelle de ton Insertbase3 ici
     import csv
-    import os
     import time
-    from pathlib import Path
-    from dotenv import load_dotenv
     from selenium import webdriver
     from selenium.webdriver.chrome.options import Options
     from selenium.webdriver.common.by import By
