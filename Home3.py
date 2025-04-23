@@ -12,6 +12,7 @@ from dotenv import load_dotenv
 import os
 import pandas as pd
 from datetime import datetime, timedelta, timezone
+from insertbase_logic import lancer_insertion
 
 # Chargement des variables d'environnement
 load_dotenv(dotenv_path=Path('.') / '.env')
@@ -79,13 +80,10 @@ elif selected == "Scraping":
 
     if "(bientôt)" not in selected_site:
         if st.button("Lancer le scraping"):
+
             with st.spinner("Scraping en cours..."):
-                result = subprocess.run(
-                    ["python", "Insertbase3.py"], capture_output=True, text=True)
-                if result.stdout:
-                    st.code(result.stdout)
-                if result.stderr:
-                    st.error(result.stderr)
+                lancer_insertion()
+
             st.success(f"Scraping de {selected_site} terminé.")
 
         # Affichage de la capture d'écran si disponible
