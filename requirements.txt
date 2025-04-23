@@ -3,3 +3,4 @@ pandas
 pyairtable
 python-dotenv
 streamlit-option-menu
+python-dotenv
