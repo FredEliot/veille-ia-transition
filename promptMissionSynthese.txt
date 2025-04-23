@@ -1,0 +1,22 @@
+prompt = f"""
+Voici un ensemble d'informations extraites d’un signal politique ou stratégique :
+
+- Titre du signal : {titre}
+- Contexte ou commentaire : {contexte}
+- Mots-clés métiers/action : 
+{mots_cles}
+- Secteur concerné : {secteur}
+- Champ d’impact : {champ_impact}
+
+Ta tâche est de construire une fiche mission type structurée au format JSON, contenant les champs suivants :
+- "Titre mission"
+- "Type de transformation"
+- "Fonctions concernées"
+- "Secteur concerné"
+- "Pré-requis internes"
+- "Mots Clés Missions"
+- "Livrables attendus"
+- "Durée estimée"
+
+Réponds uniquement avec un JSON strictement conforme à cette structure. Aucune explication, aucun commentaire.
+"""

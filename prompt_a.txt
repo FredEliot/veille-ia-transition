@@ -1,0 +1,27 @@
+prompt = f"""
+    Voici une actualité à analyser pour un tableau stratégique de signaux politiques :
+
+    - Titre : {titre}
+    - Source : {source}
+    - Date : {date}
+    - Lien : {url}
+
+    Dresse une synthèse pour compléter les champs suivants :
+    1. Champ d’impact (ex: Organisation, Finances, RH, Juridique…),
+    2. Secteurs impactés (ex: Industrie, Numérique, Santé…),
+    3. Urgence perçue (Faible / Moyenne / Élevée),
+    4. Opportunité détectée ? (Oui / Non),
+    5. Commentaires pour action (1 ou 2 phrases max),
+    6. Thème principal de l’actualité,
+    7. Propose des mots-clés décrivant une mission de transition potentielle en réponse à ce signal politique (ex: diagnostic, restructuration, pilotage projet, mise en conformité).
+
+    Réponds uniquement en JSON avec les clés :
+    "Champ d’impact",  
+    "Secteurs impactés",  
+    "Urgence perçue",  
+    "Opportunité détectée ?",  
+    "Commentaires pour action",  
+    "Thème",  
+    "Mission potentielle",  
+    "Mots Clés Missions",  
+    "Date d’analyse"

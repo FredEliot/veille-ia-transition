@@ -1,0 +1,28 @@
+prompt = f"""
+Voici une actualité stratégique à interpréter pour enrichir un référentiel de missions de transformation.
+
+- Titre : {titre}
+- Contexte : {contexte}
+
+À partir de ce signal, génère entre 5 et 10 **mots-clés métiers ou opérationnels**, en les structurant sous forme d’une **liste JSON**, avec pour chaque mot-clé les champs suivants :
+
+- "Mot-clé mission"
+- "Origine du besoin" (ex : "Réorganisation", "Urgence réglementaire", "Positionnement stratégique")
+- "Type de transformation" (ex : "Digitale", "RH / Culturelle", "Organisationnelle")
+- "Fonctions concernées" (ex : "RH", "DSI", "Direction générale")
+- "Secteur / périmètre" (déduit ou générique, ex : "Santé", "Industrie")
+
+⚠️ Réponds uniquement avec une **liste JSON** structurée comme ceci :
+
+[
+  {{
+    "Mot-clé mission": "pilotage de projet",
+    "Origine du besoin": "Réorganisation",
+    "Type de transformation": "Organisationnelle",
+    "Fonctions concernées": "Direction générale",
+    "Secteur / périmètre": "Industrie"
+  }},
+  ...
+]
+
+"""

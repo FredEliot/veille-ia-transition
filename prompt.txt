@@ -1,0 +1,50 @@
+prompt = f"""
+Voici une actualité à analyser pour un tableau stratégique de signaux politiques :
+
+- Titre : {titre}
+- Source : {source}
+- Date : {date}
+- Lien : {url}
+
+Dresse une synthèse pour compléter les champs suivants :
+1. Champ d’impact (ex: Organisation, Finances, RH, Juridique…),
+2. Secteurs impactés (ex: Industrie, Numérique, Santé…),
+3. Urgence perçue (Faible / Moyenne / Élevée),
+4. Opportunité détectée ? (Oui / Non),
+5. Commentaires pour action (1 ou 2 phrases max),
+6. Thème principal de l’actualité,
+7. Propose une liste de 8 à 15 **mots-clés** métiers/actionnables, décrivant des missions ou interventions possibles d’un manager de transition en réponse à ce signal politique.
+
+⚠️ Chaque élément de la liste doit être une **expression courte** (moins de 6 mots), claire, orientée action ou fonction (exemples : "audit sanitaire", "pilotage de crise", "mise en conformité", "gestion RH", "relocalisation industrielle").
+
+➡️ Réponds obligatoirement avec une **liste JSON bien formée**, et non une phrase :
+
+Exemple attendu :
+"Mots Clés Missions": [
+  "audit sanitaire",
+  "pilotage d’agence publique",
+  "mise en conformité",
+  "gestion des alertes sanitaires",
+  "coordination interinstitutionnelle",
+  "analyse des risques",
+  "stratégie agroalimentaire"
+]
+
+Réponds uniquement et strictement au format suivant (JSON, avec les clés et types suivants) :
+
+{{
+  "Champ d’impact": "Texte",
+  "Secteurs impactés": "Texte",
+  "Urgence perçue": "Faible / Moyenne / Élevée",
+  "Opportunité détectée ?": "Oui / Non",
+  "Commentaires pour action": "Texte",
+  "Thème": "Texte",
+  "Mission potentielle": "Texte",
+  "Mots Clés Missions": ["...", "...", "..."],
+  "Date d’analyse": "AAAA-MM-JJ"
+}}
+
+Ne réponds **que** avec ce JSON. Aucun commentaire, aucun texte supplémentaire.
+"""
+
+
