@@ -3,3 +3,4 @@ pandas
 pyairtable
 python-dotenv==1.0.0
 streamlit-option-menu
+selenium
